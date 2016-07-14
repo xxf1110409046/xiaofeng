@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    >
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingRight="10dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bl_school_exist"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/image_school"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit_school"
+        android:layout_toRightOf="@+id/image_school"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/text_exit"
+        android:textSize="15dp"/> 
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-06-14 08:27:29"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/grgray"
+        android:id="@+id/text_leave"
+        android:textSize="15dp"/>
+    </RelativeLayout>
+    
+	
+</LinearLayout>

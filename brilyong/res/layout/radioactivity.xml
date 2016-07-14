@@ -1,0 +1,249 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="@string/pedometer" />
+
+        <ImageButton
+            android:onClick="back"
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+        <!-- 
+         <LinearLayout 
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:id="@+id/reset_time"
+            android:background="@drawable/btn_click_bakground">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重置计步"
+                android:gravity="center"
+                android:textColor="@color/text_title"/>
+            
+        </LinearLayout>
+         -->
+       
+    </RelativeLayout>
+    
+     <!-- <LinearLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="120dp"
+         android:orientation="horizontal"
+         android:gravity="center">
+         <TextView 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="@string/task_board"
+             android:textSize="20dp"/>
+         
+     </LinearLayout> -->
+     
+     <LinearLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="60dp"
+         android:orientation="horizontal"
+         android:gravity="center"
+         android:background="@color/corlor_gray"
+         android:visibility="gone">
+         
+         <ImageView 
+             android:layout_width="45dp"
+             android:layout_height="45dp"
+             android:layout_marginLeft="10dp"
+             />
+         <TextView 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_marginLeft="20dp"
+             android:text="00:00"
+             android:textSize="30dp"
+             android:layout_weight="1"
+             android:id="@+id/text_start_minute"
+             android:visibility="gone"/>
+         
+         <TextView 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="/s"
+             android:textSize="15dp"
+             android:layout_weight="1"/>     
+     </LinearLayout>
+     
+     <LinearLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="200dp"
+         android:orientation="horizontal"
+         android:gravity="center"
+         android:background="@color/corlor_gray"
+         android:layout_marginTop="20dp">
+          <ImageView 
+             android:layout_width="45dp"
+             android:layout_height="45dp"
+             android:src="@drawable/xd_radio_man"
+             android:layout_marginLeft="10dp"
+             />
+         <TextView 
+             android:layout_width="150dp"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="0"
+             android:layout_marginLeft="20dp"
+             android:textSize="30dp"
+             android:id="@+id/text_finishStep"/>
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="@string/step"
+             android:textSize="15dp"/>
+         <LinearLayout 
+             android:layout_width="fill_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+             <ImageView 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:src="@drawable/xd_foot_1"
+             android:layout_marginTop="80dp"/>
+              <ImageView 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:src="@drawable/xd_foot_2"
+             android:layout_marginTop="5dp"
+             android:layout_marginLeft="20dp"/>
+             
+         </LinearLayout>
+          <TextView 
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="0"
+             android:textSize="20dp"/>
+         
+     </LinearLayout>
+     
+     <LinearLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="100dp"
+         android:orientation="horizontal"
+         android:gravity="center"
+         android:layout_marginTop="20dp"
+         android:visibility="gone">
+         <Button 
+             android:layout_width="120dp"
+             android:layout_height="40dp"
+             android:background="@drawable/btn_select_back"
+             android:text="@string/begain_step_calculation"
+             android:textColor="@color/text_title"
+             android:id="@+id/start_time"/>
+         <Button 
+             android:layout_width="120dp"
+             android:layout_height="40dp"
+             android:background="@drawable/btn_select_back"
+             android:text="@string/stop_step_calculation"
+             android:textColor="@color/text_title"
+             android:id="@+id/stop_time"
+             android:visibility="gone"/>
+         
+     </LinearLayout>
+     
+     
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ededed">
+	     <ImageView 
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             android:src="@drawable/bl_logo"
+             android:layout_marginTop="15dp"/>
+	      <ImageView 
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             android:src="@drawable/bl_logo"
+             android:layout_marginTop="15dp"/>
+	       <ImageView 
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"          
+             android:src="@drawable/bl_logo"
+             android:layout_weight="1"
+             android:layout_marginTop="15dp"/>
+	    
+	</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#ededed"
+        android:layout_gravity="bottom">
+         
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#ededed"
+            android:gravity="center"
+            android:orientation="horizontal" 
+            >
+
+            <RadioButton
+                android:id="@+id/btn_0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/task_simple"
+                android:textColor="@color/title"
+                android:textSize="20.0sp" 
+                android:singleLine="false"
+                android:maxEms="3"
+                />
+
+            <RadioButton
+                android:id="@+id/btn_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/task_midle"
+                android:textColor="@android:color/black"
+                android:textSize="20.0sp" />
+
+            <RadioButton
+                android:id="@+id/btn_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/task_complex"
+                android:textColor="@android:color/black"
+                android:textSize="20.0sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

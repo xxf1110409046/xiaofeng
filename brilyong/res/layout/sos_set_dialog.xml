@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp" >
+
+    <TextView
+        android:id="@id/tv_name"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sos_name"
+        android:textColor="#ff00a0e9"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="18599838231"
+        android:textColor="#ff5d5d5d"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/separation_line" />
+
+    <RelativeLayout
+        android:id="@+id/ll_set_number1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sos_number_item_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/set_sos_number"
+            android:textColor="#ff5d5d5d" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/icon_sos_index"
+            android:text="1"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/separation_line" />
+
+     <RelativeLayout
+        android:id="@+id/ll_set_number2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sos_number_item_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/set_sos_number"
+            android:textColor="#ff5d5d5d" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/icon_sos_index"
+            android:text="2"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/separation_line" />
+
+    <RelativeLayout
+        android:id="@+id/ycsh"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sos_number_item_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/sos_call"
+            android:textColor="#ff5d5d5d" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/icon_yuanc" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/separation_line" />
+    <LinearLayout
+        android:id="@+id/ll_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sos_number_item_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/delete"
+            android:textColor="#ff5d5d5d" />
+    </LinearLayout>
+
+</LinearLayout>

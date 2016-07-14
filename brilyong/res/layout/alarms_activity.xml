@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/alarm_layout_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp" >
+
+        <ImageView
+            android:id="@+id/alarm_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/xd_xiafa_naozhong" />
+
+        <TextView
+            android:id="@+id/alarm_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/alarm_image"
+            android:gravity="center"
+            android:text="@string/alarm"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/alarm_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/alarm_check_1"
+            android:text="00:00" />
+
+        <CheckBox
+            android:id="@+id/alarm_check_1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/checked"
+            android:focusable="false"
+            android:gravity="right|center" />
+    </RelativeLayout>
+
+</LinearLayout>

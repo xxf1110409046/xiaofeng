@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffebebeb"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="@string/idea_feedback" />
+
+        <ImageButton
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/feedback_message"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/fan_content"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_setting"
+            android:gravity="top|left|center"
+            android:hint="@string/feedback_txt"
+            android:padding="5dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="155dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <EditText
+            android:id="@+id/fan_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/name_bg"
+            android:hint="@string/please_input_telephone"
+            android:paddingLeft="5dp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/fang_emain"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/name_bg"
+            android:hint="@string/please_input_email_adress"
+            android:paddingLeft="5dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <Button
+        android:onClick="submit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exio_items"
+        android:text="@string/submit"
+        android:textColor="#ffff761a"
+        android:textSize="17sp" />
+
+</LinearLayout>

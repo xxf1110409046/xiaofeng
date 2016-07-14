@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="添加联系人" />
+
+        <ImageButton
+            android:onClick="back"
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+         <LinearLayout
+            android:onClick="addRelationShip"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_select_back"
+            android:clickable="true"
+            android:gravity="center" >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="@string/comfir" 
+                android:gravity="center"
+                android:textColor="@color/text_title"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relationship_list"/>
+
+</LinearLayout>

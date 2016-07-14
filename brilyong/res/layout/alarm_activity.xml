@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffebebeb"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="@string/alarm" />
+
+        <ImageButton
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="back" />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:layout_alignParentRight="true"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:id="@+id/alarm_text_baocun"/>    
+    </RelativeLayout>
+    <ListView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/alarm_listView">
+        
+    </ListView>
+   <!--  <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:background="#ffffffff"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_1">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟1"
+                        android:textColor="@color/black" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_1"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_1"/> 
+                      "
+                    
+
+                    <CheckBox
+                        android:id="@+id/alarm_check_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_2">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟2"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_2"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_2"/>
+
+                    <CheckBox
+                        android:id="@+id/alarm_check_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_3">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟3"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_3"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_3"/>
+
+                    <CheckBox
+                        android:id="@+id/alarm_check_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_4">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟4"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_4"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_4"/>
+
+                    <CheckBox
+                        android:id="@+id/alarm_check_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_5">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟5"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_5"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_5"/>
+
+                    <CheckBox
+                        android:id="@+id/alarm_check_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_6">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟6"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_6"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_6"/>
+
+                    <CheckBox
+                       android:id="@+id/alarm_check_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_7">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟7"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_7"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_7"/>
+
+                    <CheckBox
+                       android:id="@+id/alarm_check_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp" 
+                    android:id="@+id/alarm_layout_8">
+
+                    <ImageView
+                        android:id="@+id/xiafa_lan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/xd_xiafa_naozhong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/xiafa_lan"
+                        android:gravity="center"
+                        android:text="闹钟8"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/alarm_check_8"
+                        android:layout_marginRight="70dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="00:00"
+                        android:id="@+id/alarm_text_8"/>
+
+                    <CheckBox
+                        android:id="@+id/alarm_check_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checked"
+                        android:gravity="right|center" />
+                </RelativeLayout>
+                <View style="@style/separation_line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView> -->
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30.0dip"
+    android:paddingRight="30.0dip" >
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="50.0dip"
+        android:background="@drawable/shape_diaolg_bg"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/operating_mode"
+            android:textColor="#ffffffff"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog_bottom"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" >
+
+       <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:divider="@drawable/dialog_vertial_line"
+            android:orientation="vertical"
+            android:showDividers="middle" >
+            
+
+            <TextView
+                android:id="@+id/gao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/bl_radiobutton_normal"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="@string/manual_mode"
+                android:textColor="#ff777777" 
+                android:onClick="freQuencyOclick"/>
+
+            <TextView
+                android:id="@+id/zzms"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/bl_radiobutton_normal"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="@string/tracking"
+                android:textColor="#ff777777" 
+                android:onClick="freQuencyOclick"/>
+        </LinearLayout>
+    </LinearLayout>
+ 
+</LinearLayout>

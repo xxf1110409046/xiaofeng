@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ffe4e6e6"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                style="@style/title_text"
+                android:text="@string/electronic_fence_details" />
+
+            <ImageButton
+                style="@style/imgbt_back"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:onClick="back" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:padding="5.0dip"
+                android:text="@string/electronic_fence_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/safe_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:hint="@string/please_electronic_fence_name"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View style="@style/separation_line" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+
+            <RadioButton
+                android:id="@+id/into"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/safe_type_select_bg"
+                android:paddingLeft="10dp"
+                android:checked="true"
+                android:text="@string/exit_fencing_call"
+                android:textSize="14sp" />
+
+            <View style="@style/separation_line" />
+
+            <RadioButton
+                android:id="@+id/out"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/safe_type_select_bg"
+                 android:paddingLeft="10dp"
+                android:text="@string/leave_fencing_call"
+                android:textSize="14sp" />
+
+            <View style="@style/separation_line" />
+
+            <RadioButton
+                android:id="@+id/intoout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/safe_type_select_bg"
+                 android:paddingLeft="10dp"
+                android:text="@string/exit_leave_fengcing_call"
+                android:textSize="14sp" />
+
+            <View style="@style/separation_line" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_select_back"
+        android:gravity="center"
+        android:onClick="safeOk"
+        android:text="@string/accomplish"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

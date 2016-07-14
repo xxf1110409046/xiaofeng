@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_phone_listen"
+        android:orientation="vertical">
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_listen_text"
+            android:text="是否进行设置？"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="18dp"
+            android:gravity="center"/>
+        <View android:layout_height="0.5dp"
+            android:layout_width="fill_parent"
+            android:background="#E6E6E6"/>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <Button 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/phone_no"
+                android:background="@color/white"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+                android:text="否"
+                android:textSize="18dp"
+                android:layout_weight="1"/>
+            
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="fill_parent"
+                android:background="#E6E6E6"
+                android:layout_gravity="center"/>
+            
+            <Button 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_ok"
+                android:textSize="18dp"
+                android:background="@color/white"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+                android:text="是"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+
+</LinearLayout>

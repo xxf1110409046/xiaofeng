@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.brilyong.technology.activity.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.umeox.capsule"
+    xmlns:zhy="http://schemas.android.com/apk/res/com.brilyong.technology"
+    android:id="@+id/id_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    zhy:rightPadding="100dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_menu" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:background="@color/title" >
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:onClick="actiongong"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/bl_bd_back" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:onClick="change"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_baby_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/baby"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginLeft="-15.0dip"
+                        android:src="@drawable/bl_home_title_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="fill_parent"
+                        android:background="@null"
+                        android:onClick="EnterMsg"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/bl_xinxi_zhongxin" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-12dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/bl_unread_tag"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/equipment_miss"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/grgray"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iamge_misss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/home_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iamge_misss"
+                    android:gravity="center"
+                    android:text="设备已经离线" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/home_dismiss" 
+                    android:id="@+id/cancel_offline"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/bmapView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:clickable="true"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/show_maplayer"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5.0dip"
+                    android:padding="7.0dip"
+                    android:src="@drawable/bl_map_icon_layer_moren"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="30dp"
+                            android:background="@drawable/bl_baidu_bakg" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="TrackBaby" >
+
+                                <ImageView
+                                    android:layout_width="45.0dip"
+                                    android:layout_height="45.0dip"
+                                    android:padding="6.0dip"
+                                    android:src="@drawable/bl_yuyin" />
+
+                                <TextView
+                                    android:layout_width="75.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="left|center"
+                                    android:singleLine="true"
+                                    android:text="@string/voice_tackback"
+                                    android:textColor="#ff505050"
+                                    android:textSize="15.0sp"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:onClick="CallBaby" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="right|center"
+                                    android:singleLine="true"
+                                    android:text="@string/call_equipment"
+                                    android:textColor="#ff505050"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:padding="6dp"
+                                    android:src="@drawable/bl_telephone" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <ImageButton
+                            android:id="@+id/selection_date"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bl_guiji" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_danci_dinwei"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/show_maplayer"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/bl_danci_dinwei"
+                    android:onClick="tape" />
+
+                <ImageButton
+                    android:id="@+id/btn_qq_luyin"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/show_maplayer"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="80dp"
+                    android:background="@drawable/bl_qq_luyin"
+                    android:onClick="tape" />
+
+                <ImageButton
+                    android:id="@+id/btn_shebei_chazhao"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/btn_qq_luyin"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bl_shebei_chazhao"
+                    android:onClick="tape" />
+
+                <ImageButton
+                    android:id="@+id/btn_phone_listen"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/btn_shebei_chazhao"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/xd_phone_listen"
+                    android:onClick="tape" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.brilyong.technology.activity.SlidingMenu>

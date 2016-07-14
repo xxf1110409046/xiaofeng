@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="@string/love_number" />
+
+        <ImageButton
+            android:onClick="back"
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:onClick="addNmber"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_select_back"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/add_number" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:padding="5.0dip"
+            android:text="@string/no_number"
+            android:textColor="#ff5c5c5c"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/dear_number_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000" />
+    </LinearLayout>
+   
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/sos_number_icon"
+        android:drawablePadding="10.0dip"
+        android:gravity="center"
+        android:padding="5.0dip"
+        android:text="@string/sos_number_attention"
+        android:textColor="#ff5c5c5c"
+        android:textSize="14.0sp" />
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bl_delete_all_number"
+            android:layout_marginBottom="10dp"
+            android:text="@string/bl_deleteall_number"
+            android:id="@+id/bl_deleteall_number"/>
+</LinearLayout>

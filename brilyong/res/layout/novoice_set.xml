@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="@string/client_time" />
+
+        <ImageButton
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="back" />
+
+        <LinearLayout
+            android:id="@+id/add_noice"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_select_back" 
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/button_text_color" 
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55dp" >
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/set"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:id="@+id/voice_check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:button="@drawable/checked"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/voice_check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:button="@drawable/checked" 
+                />
+        </RelativeLayout>
+
+        <View style="@style/separation_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/time_1"
+                android:textColor="@color/separation_line"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <View style="@style/separation_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <LinearLayout
+                android:id="@+id/text_add"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" >
+
+                <TextView
+                    android:id="@+id/text_1"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="00:00~00:00"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bl_xiala" 
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <View style="@style/separation_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/time_2"
+                android:textColor="@color/separation_line"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <View style="@style/separation_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <LinearLayout
+                android:id="@+id/text_add2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" >
+
+                <TextView
+                    android:id="@+id/text_2"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="00:00~00:00"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bl_xiala" 
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <View style="@style/separation_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/text_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="星期 :"
+                android:textColor="@color/separation_line"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/text_2"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/zhou_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_checked" />
+
+                <CheckBox
+                    android:id="@+id/zhou_2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_cheched2" />
+
+                <CheckBox
+                    android:id="@+id/zhou_3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_cheched3" />
+
+                <CheckBox
+                    android:id="@+id/zhou_4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_cheched4" />
+
+                <CheckBox
+                    android:id="@+id/zhou_5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_cheched5" />
+
+                <CheckBox
+                    android:id="@+id/zhou_6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_cheched6" />
+
+                <CheckBox
+                    android:id="@+id/zhou_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/bl_voice_cheched7" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/separation_line"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

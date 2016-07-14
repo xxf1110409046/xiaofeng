@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp" >
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/please_select"
+        android:textColor="#ff00a0e9"
+        android:textSize="18dp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separation_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_yaoqing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_number_listitems_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/invite_attation"
+            android:textColor="#ff5d5d5d" />
+    </LinearLayout>
+
+   
+     <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/separation_line" />
+     <LinearLayout
+        android:id="@+id/ll_add_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_number_listitems_bg" 
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:text="@string/add_relationship_number"
+            android:textColor="#ff5d5d5d" />
+    </LinearLayout>
+    
+    
+   
+
+</LinearLayout>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+   
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/capsule_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/title"
+                android:orientation="vertical"
+                android:paddingBottom="10.0dip"
+                android:paddingTop="10.0dip" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10.0dip" >
+
+                    <FrameLayout
+                        android:id="@+id/ll_image"
+                        android:layout_width="105.0dip"
+                        android:layout_height="120.0dip"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="85.0dip"
+                            android:layout_height="85.0dip"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bl_aunt" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/follow_member_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/men_select"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick_Event"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/bl_icon_dear_phone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_weight="1.0"
+                        android:text="@string/family_number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="15.0dip"
+                        android:layout_height="15.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sos_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_dui"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/men_select"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick_Event"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/bl_icon_location_service" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/slidingmenufragment_paddingleft"
+                        android:layout_weight="1.0"
+                        android:text="@string/attation_item"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/slidingmenufragment_textsize" />
+
+                    <ImageView
+                        android:id="@+id/iv_sos"
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/school_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_school"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/men_select"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick_Event"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/bl_icon_xiaoyuan" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/slidingmenufragment_paddingleft"
+                        android:layout_weight="1.0"
+                        android:text="@string/school_manage"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/slidingmenufragment_textsize" />
+
+                    <ImageView
+                        android:id="@+id/iv_school"
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/security_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_wei"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/men_select"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick_Event"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="@dimen/slidingmenufragment_paddingleft"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="@dimen/slidingmenufragment_icon"
+                        android:layout_height="@dimen/slidingmenufragment_icon"
+                        android:src="@drawable/bl_icon_electronic_fence" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/slidingmenufragment_paddingleft"
+                        android:layout_weight="1.0"
+                        android:text="@string/electron_fencing"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/slidingmenufragment_textsize" />
+
+                    <ImageView
+                        android:id="@+id/iv_security"
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/security_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="@dimen/slidingmenufragment_paddingleft"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="@dimen/slidingmenufragment_icon"
+                        android:layout_height="@dimen/slidingmenufragment_icon"
+                        android:src="@drawable/icon_herter" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/slidingmenufragment_paddingleft"
+                        android:layout_weight="1.0"
+                        android:text="@string/heart_rate_mon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/slidingmenufragment_textsize" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/security_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_uni"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/men_select"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick_Event"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="@dimen/slidingmenufragment_paddingleft"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="@dimen/slidingmenufragment_icon"
+                        android:layout_height="@dimen/slidingmenufragment_icon"
+                        android:src="@drawable/bl_icon_locating_frequency" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/slidingmenufragment_paddingleft"
+                        android:layout_weight="1.0"
+                        android:text="@string/oder_send"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/slidingmenufragment_textsize" />
+
+                    <ImageView
+                        android:id="@+id/iv_securitys"
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_alarm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/men_select"
+                    android:gravity="center_vertical"
+                    android:onClick="onClick_Event"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12.0dip"
+                    android:paddingLeft="@dimen/slidingmenufragment_paddingleft"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="12.0dip" >
+
+                    <ImageView
+                        android:layout_width="@dimen/slidingmenufragment_icon"
+                        android:layout_height="@dimen/slidingmenufragment_icon"
+                        android:src="@drawable/icon_historical_track" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/slidingmenufragment_paddingleft"
+                        android:layout_weight="1.0"
+                        android:text="@string/drop_call"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/slidingmenufragment_textsize" />
+
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:src="@drawable/icon_jr" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/line" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15.0dip" >
+
+        <LinearLayout
+            android:id="@+id/btn_set"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/men_select"
+            android:gravity="left|center"
+            android:onClick="onClick_Event"
+            android:orientation="horizontal"
+            android:paddingBottom="12.0dip"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="12.0dip" >
+
+            <ImageView
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:src="@drawable/icon_personal_setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/application_set"
+                android:textColor="@color/black"
+                android:textSize="@dimen/slidingmenufragment_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_our"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/men_select"
+            android:gravity="left|center"
+            android:onClick="onClick_Event"
+            android:orientation="horizontal"
+            android:paddingBottom="12.0dip"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="12.0dip" >
+
+            <ImageView
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:src="@drawable/icon_add_watch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/about_us"
+                android:textColor="@color/black"
+                android:textSize="@dimen/slidingmenufragment_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

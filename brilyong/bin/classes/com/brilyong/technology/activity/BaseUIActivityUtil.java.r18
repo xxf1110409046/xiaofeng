@@ -1,0 +1,41 @@
+package com.blyang.technology.activity;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import cn.jpush.android.api.JPushInterface;
+
+import com.blyang.technology.app.MyApplication;
+
+public class BaseUIActivityUtil extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		MyApplication.getInstance().addActivity(this);
+	}
+
+	public void back(View v) {
+		finish();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		JPushInterface.onResume(this);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		JPushInterface.onPause(this);
+	}
+
+	@Override
+	protected void onDestroy() {
+		MyApplication.getInstance().removeActivity(this);
+		super.onDestroy();
+	}
+
+}

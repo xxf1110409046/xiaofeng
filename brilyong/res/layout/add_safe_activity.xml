@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            style="@style/title_text"
+            android:text="@string/add_electron_fencing" />
+
+        <ImageButton
+            style="@style/imgbt_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/set_electronic_fence"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="5.0dip" >
+
+            <ImageButton
+                android:id="@+id/jian_safe"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8.0dip"
+                android:background="@null"
+                android:src="@drawable/jian" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip" >
+
+                <TextView
+                    android:id="@+id/tv_safeinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="500m"
+                    android:textColor="#ffffff"
+                    android:textSize="12.0dip" />
+
+                <SeekBar
+                    android:id="@+id/safe_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="false"
+                    android:max="2000"
+                    android:progressDrawable="@drawable/seekbar_define_style"
+                    android:progress="500"
+                    android:maxHeight="10dp"
+                    android:minHeight="10dp"
+                    android:thumb="@drawable/seekbar_thumb" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="left|center"
+                        android:text="100"
+                        android:textColor="#ffffff"
+                        android:textSize="11.0sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="1000"
+                        android:textColor="#ffffff"
+                        android:textSize="11.0sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="right|center"
+                        android:text="2000"
+                        android:textColor="#ffffff"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/add_safe"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8.0dip"
+                android:background="@null"
+                android:src="@drawable/jia" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dianzi_botton"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10.0dip" >
+
+            <TextView
+                android:id="@+id/safe_id"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:hint="@string/not_get_adress"
+                android:maxLines="3"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bt_add_asfe"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/safe_select_ok_bg"
+                android:onClick="okSafe"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/confirm"
+                android:textColor="#ffffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

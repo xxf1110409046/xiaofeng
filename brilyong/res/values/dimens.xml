@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="title_text_size">19sp</dimen>
+	<dimen name="message_adpapter_btn_higth">25.0dip</dimen>
+	<dimen name="slidingmenufragment_textsize">16sp</dimen>
+    <dimen name="slidingmenufragment_paddingleft">35dp</dimen>
+    <dimen name="slidingmenufragment_icon">30dp</dimen>
+	
+</resources>
